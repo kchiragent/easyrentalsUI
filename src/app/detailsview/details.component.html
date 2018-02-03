@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to THis is details page
+  </h1>
+  <div>
+      {{param}}
+      <div *ngIf="result">
+          <h3>report retrived</h3>
+      <h3>Nutrients for {{result.report.food.name}}</h3>
+          <ul>
+              <li *ngFor="let nutrient of result.report.food.nutrients">
+                  <h5>{{nutrient.name}}</h5>
+              </li>
+          </ul>
+      </div>
+  </div>
+</div>
+

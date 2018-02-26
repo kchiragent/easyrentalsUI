@@ -7,8 +7,16 @@
     <li *ngFor="let car of result">
       <div>{{car.licenseNum}}</div>
   </li>
-  <li>
-    Test</li>
 </ul>
+</div>
+<div *ngIf="errorMessage">
+    {{errorMessage}}
+    <br>
+    Api URL called was :{{foodService.apiURL}}
+</div>
+<div>
+    <input #carName placeHolder="CarName">
+    
+    <button (click)="AddCar(carName.value)" >List Your Car</button>
 </div>
 

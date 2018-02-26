@@ -12,23 +12,15 @@ export class AppComponent {
   title = 'Food Application';
   result: any[] ;
   errorMessage: any;
-  //foodService: FoodService;
   
   constructor(public foodService: FoodService) {
-     //this.foodService = foodService;
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       console.log("In the Constructor");
-      //console.log(foodService.searchURL);
       
-     // foodService.search('butter').subscribe(result =>{
-    //    this.result=result;
-    //    console.log(result);
-    //  }, 
-    //  error => { 
-    //     this.errorMessage = <any>error; 
-    //  });
-      
+    };
+    ngOnInit(){
+        this.onEnter('');
     };
     
     onEnter(value:string){
@@ -42,6 +34,12 @@ export class AppComponent {
           });
       
     
+    }
+    
+    AddCar(value:string){
+     console.log("in Addcar:" + value);
+     this.foodService.listCar(value);
+     this.onEnter('');
     }
   
 }

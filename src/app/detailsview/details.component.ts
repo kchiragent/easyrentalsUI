@@ -29,6 +29,7 @@ export class DetailsComponent {
     ngOnInit(){
     this.param = +this.route.snapshot.paramMap.get('id');
     console.log("in OnEnter" + this.param);
+    /*
           this.foodService.report(this.param).subscribe(result =>{
             this.result=result;
             console.log(result);
@@ -36,7 +37,7 @@ export class DetailsComponent {
           error => { 
              this.errorMessage = <any>error; 
           });
-      
+      */
     
     }
   

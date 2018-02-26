@@ -9,11 +9,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { DetailsComponent } from './detailsview/details.component';
+import { ListCar } from './ListCar/ListCar';
 
 import { AppRoutingModule } from './/app-routing.module';
 
 const routes: Routes = [
   { path: 'detail/:id', component: DetailsComponent },
+  { path: 'list/', component: ListCar },
   { path: 'home', component: AppComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 
@@ -25,7 +27,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,ListCar
   ],
   imports: [
     BrowserModule,
